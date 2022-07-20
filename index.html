@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="https://img.gejiba.com/images/91eb904036d99e84822caa30219f7bc7.png">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=0.4,maximum-scale=1.0,minimum-scale=0.4,user-scalable=no">
+    <title>crx-webstack-page</title>
+    <meta name="description" content="crx-webstack-page是一款不替换原有新标签页的书签导航页浏览器扩展">
+
+    <style>
+        *,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .div_0 {
+
+            position: relative;
+            /* background-color: #f8f8f8; */
+            user-select: none;
+        }
+
+        .div_top {
+            width: 100%;
+            background-image: linear-gradient(90deg, rgba(255, 113, 154, 1) 0%, rgba(255, 169, 159, 1) 48%, rgba(255, 226, 159, 1) 100%);
+            margin-bottom: 25px;
+        }
+
+        .div_top_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            max-width: 700px;
+            margin: 0px auto 0px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .crx_title {
+            display: inline-block;
+            font-family: '微软雅黑';
+            background-image: linear-gradient(to left, #30CFD0 0%, #330867 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+
+
+        .logo_img {
+            width: 80px;
+        }
+
+        .div_content {}
+
+        .div_content_1,
+        .div_content_2 {
+            display: flex;
+            padding: 20px;
+        }
+
+        .desc,
+        .img_out {
+            /* flex: 1; */
+        }
+
+        .desc_right {
+            text-align: right;
+        }
+
+        /* .div_content_1 {
+            background-color: beige;
+        } */
+
+        /* .div_content_2 {
+            background-image: linear-gradient(160deg, rgb(128 208 199 / 60%) 0%, rgb(0 147 233 / 90%) 100%);
+        } */
+
+        .img_out {
+            width: 400px;
+            height: 235px;
+            /* border: 2px solid red; */
+            margin: 20px auto 20px;
+            perspective: 800px;
+        }
+
+        .img_out .img_show {
+            width: 400px;
+            height: 235px;
+            position: fixed;
+            /* border: 0 solid; */
+            border-radius: 8px;
+            transition: all 1s ease;
+        }
+
+        .img_show:hover {
+            width: 440px;
+            height: 250px;
+            transition: all 1s ease-in-out;
+        }
+
+
+        .img_out .img_show_left {
+
+            transform: rotateY(15deg);
+            box-shadow: -5px 5px 15px 5px rgb(0 0 0 / 20%);
+        }
+
+        .img_out .img_show_right {
+            transform: rotateY(-15deg);
+            box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 20%);
+        }
+
+        .div_content_1 .desc {
+            /* padding: 15px 0; */
+            margin: auto auto auto 0;
+        }
+
+        .div_content_2 .desc {
+            /* padding: 15px 0; */
+            margin: auto 0 auto auto;
+        }
+
+
+        .desc h2,
+        .div_bottom h2 {
+            font-size: 30px;
+
+        }
+
+        .desc p {
+            margin: 15px 0;
+            font-size: 20px;
+        }
+
+        .div_bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 130px;
+            margin-bottom: 50px;
+        }
+
+        .div_bottom .btn {
+            padding-top: 20px;
+            display: flex;
+            width: 455px;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .btn_0 {
+            width: 90px;
+            height: 20px;
+            background: linear-gradient(to left, #30CFD0 0%, #31afbf 100%);
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+            padding: 8px 18px;
+            font-size: 15px;
+        }
+
+        .btn_0:hover {
+            background: linear-gradient(90deg, rgba(255, 113, 154, 1) 0%, rgba(255, 169, 159, 1) 48%, rgba(255, 226, 159, 1) 100%);
+        }
+
+        .e-icon {
+            height: 20px;
+            width: 20px;
+        }
+
+        @media screen and(max-width: 850px) {
+
+            .div_content_1,
+            .div_content_2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .desc {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+
+
+            .div_content_1 .desc,
+            .div_content_2 .desc {
+                margin: 0;
+            }
+
+            .img_out .img_show_left,
+            .img_out .img_show_right {
+
+                transform: rotateY(0deg);
+                box-shadow: -5px 5px 15px 5px rgb(0 0 0 / 20%);
+            }
+
+            .img_show:hover {
+                width: 420px;
+                height: 245px;
+                transition: all 1s ease;
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div_0">
+        <div class="div_top">
+            <div class="div_top_content">
+                <img src="https://img.gejiba.com/images/91eb904036d99e84822caa30219f7bc7.png" class="logo_img">
+                <!--https://img.gejiba.com/images/9e3c57edce307700f98e5977c081dce1.png -->
+                <h1 class="crx_title">crx-webstack-page</h1>
+                <p class="chakra-text css-y1gt6f">不替换原有新标签页的自定义书签导航页<strong>扩展程序</strong></p>
+            </div>
+        </div>
+
+        <div class="div_content">
+
+            <div class="div_content_1">
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/fda5daa59625ec4640b1ed6ee832777e.png"
+                        class="img_show img_show_left">
+                </div>
+                <div class="desc">
+                    <h2 class="">分类清晰，可折叠</h2>
+                    <p class="">美观的</p>
+                    <p class="">自定义书签管理工具</p>
+                </div>
+            </div>
+
+            <div class="div_content_2">
+                <div class="desc desc_right">
+                    <h2 class="">方便</h2>
+                    <p class="">点击图标，打开popup页面</p>
+                    <p class="">一键添加</p>
+                </div>
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/09b30ebe4b0691189e76b829aa979189.png"
+                        class="img_show img_show_right">
+                </div>
+            </div>
+
+            <div class="div_content_1">
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/3be7d2561f3cdafb93cbc7ed78ac71cb.png "
+                        class="img_show img_show_left">
+                </div>
+                <div class="desc">
+                    <h2 class="">快捷、轻松</h2>
+                    <p class="">右键单击空白处打开检索页面</p>
+                    <p class="">不可或缺</p>
+                </div>
+            </div>
+
+            <div class="div_content_2">
+                <div class="desc desc_right">
+                    <h2 class="">微应用</h2>
+                    <p class="">写作『微应用』，读作『伪应用』</p>
+                    <p class="">即用即走、缓解标签页拥挤</p>
+                </div>
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/b06525e6aa21293d13e52f5f503be44f.png"
+                        class="img_show img_show_right">
+                </div>
+            </div>
+
+            <div class="div_content_1">
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/772bb7766beff7f1bb3e4908601e7891.png"
+                        class="img_show img_show_left">
+                </div>
+                <div class="desc">
+                    <h2 class="">简洁</h2>
+                    <p class="">新标签页只留一个搜索框即可</p>
+                    <p class="">常用书签就放这里吧</p>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- popup https://img.gejiba.com/images/09b30ebe4b0691189e76b829aa979189.png -->
+        <!-- 检索  https://img.gejiba.com/images/3be7d2561f3cdafb93cbc7ed78ac71cb.png -->
+
+
+
+
+        <div class="div_bottom">
+            <h2>开始使用 crx-webstack-page</h2>
+            <div class="btn">
+                <a href="https://mingri159.github.io/myBlog/pages/52d5c3/" target="_blank" class="btn_0">使用说明</a>
+                <!-- <a href="./demo/index.html" target="_blank" class="btn_0">demo.github</a> -->
+                <!-- <a href="http://mingri159.gitee.io/webstack-page-gitee/#/home" target="_blank"
+                    class="btn_0">demo.gitee</a> -->
+                <a class="btn_0"
+                    href="https://microsoftedge.microsoft.com/addons/detail/crxwebstackpage/ongogbphfakojfhlbncflieccnbmidkf?hl=zh-CN">
+                    <img class="e-icon" src="./assets/edge.svg">
+                    <span>v1.6.3</span>
+                </a>
+                <a class="btn_0" href="./demo-mini/index.html">
+                    <img class="e-icon" src="./assets/github.ico">
+                    <span>demo </span>
+                </a>
+                <a href="https://mubu.com/doc/2zyMuBklf1p/" target="_blank" class="btn_0">更新信息</a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
