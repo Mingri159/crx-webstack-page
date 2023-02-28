@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="./logo.png">
+  <title>webstack-page-mini</title>
+  <link rel="manifest" href="manifest.json">
+  <link href="app.css" rel="preload" as="style">
+  <link href="app.js" rel="preload" as="script">
+  <link href="app.css" rel="stylesheet">
+</head>
+
+<body><noscript><strong>We're sorry but crx-webstack-page-mini doesn't work properly without JavaScript enabled. Please
+      enable it to continue.</strong></noscript>
+  <div id="app"></div>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="app.js"></script>
+</body>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('./sw.js')
+        .then(function (registration) {
+          // 注册成功
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch(function (err) {
+          // 注册失败:(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+  }
+</script>
+
+</html>

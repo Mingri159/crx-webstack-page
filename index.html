@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="https://img.gejiba.com/images/91eb904036d99e84822caa30219f7bc7.png" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=0.4,maximum-scale=1.0,minimum-scale=0.4,user-scalable=no" />
+    <title>crx-webstack-page</title>
+    <meta name="description" content="crx-webstack-page是一款不替换原有新标签页的书签导航页浏览器扩展" />
+    <link rel="stylesheet" href="assets/css/1.css" />
+    <link rel="stylesheet" href="assets/css/2.css" />
+</head>
+
+<body>
+    <div class="div_0">
+        <div class="div_top">
+            <div class="div_top_content">
+                <img src="https://img.gejiba.com/images/91eb904036d99e84822caa30219f7bc7.png" class="logo_img" />
+                <!--https://img.gejiba.com/images/9e3c57edce307700f98e5977c081dce1.png -->
+                <h1 class="crx_title">crx-webstack-page</h1>
+                <p class="chakra-text css-y1gt6f">
+                    不替换原有新标签页的自定义书签导航页<strong>扩展程序</strong>
+                </p>
+                <div class="Home_home-main__sXFcR">
+                    <ul class="Home_platforms__m_RsE">
+
+                        <li class="Home_platform__WoNds">
+                            <a target="_blank"
+                                href="https://microsoftedge.microsoft.com/addons/detail/crxwebstackpage/ongogbphfakojfhlbncflieccnbmidkf?hl=zh-CN"
+                                rel="noreferrer">
+                                <div class="Home_platform-icon__X1TLd">
+                                    <span>
+
+                                        <img alt="Edge"
+                                            src="data:image/webp;base64,UklGRkAFAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSDwCAAABkERbmyFJf2b22LaNVbtXY9u2bdvGyratlW3baNt5SvEPKiL+iBotI2IC4L+lFTR+85VP8Q5HwudHB+d1raRZ1raHU1A27ek4U5scU+KR1nUlWAtrYDjSs+f11bV4hYqv5lZjLED16XVV5DmJOrJpdJVfoJ5sPVXZaNR2J03uJ6jxUgrzFOrMOhOsRL2dpaWaou7PZaxn2mEXiUGof6IllCvKB3CC0FxEpl+4SJY49KAPVhVoj070xeUCRx3ok494VnKabyTzwr4gcezy0MKFw1Ykkrl442Jp2Kvy4LXYWSrGW4e0NwzgZjmj6jBNXD4QLOqgcfOu0SwE4b00aby3NCFi7Wi+8tJoCokVpDnDS6YpIZabkTTnhdOEitVByvQsvFc0XcVWkswB/nmaVULlbIr3hsAammg/AeM8EtrFQXAwDbYWGICEjmAQrU10xeCFMbnw0iAeQYPDeTDElrCXgex2orRyPPCb+CyDeXO9n2qCdFMifFqY92vuFmOmT2tfEkjNz0T4tIiQ2plU+Ly6LvliqNAeZ+oB/ckQrzeksFr5Sxl36BAf98opUXrsR7wsBcFMAaLjyuy6lfIAGIVrt1zzEhE9jeRgrRLvdqwbufOA0DqjTvSCSQG57uvzrRjQFv+sy/vyQF3llR7PSgB93hM63CkIKo1ZTJV7STZQ3PilmueBoN4aEE6XMDsraJljSrgXJvN6aE7Q1ghb+RkR0e3gxextboDm/gMWH3yQ5HDGvLy1d3xjC/5bAlZQOCDeAgAAcBEAnQEqQABAAD6RPJlJJaMiISgUDfiwEglsDblk5aff9V5+zInVeKF4ojlPP+Y+dj4nfSt8wH7QetP6MPOA/oHpAexb6AHlu/tV8KOAcsXmkCZm9AD+G9Ob0AP1AQF/AUWV7cxHg2e+SyeXH4K1r0ulqUX0Yw8Mn2nUb/XFPlH/DZUy1J/6E0FQ9tgc79v3iEZlgAD++nXY/tgvtdvRYjbJVo7dfOY3VYH0ORUnP0dOtDfRKmgsFywBgwRPLwdMJ+o5VEod8+xUCbO3S/czfhOj/ltUnd/QOQymcdSWvpa4omNnL57QhezJgfRn5nJ4B8H8/8UHUbzk/5/7Wz//3brmohqx2DE6IDkz+PFU3MNHSecL+fG/HKevhUZQZTFzpYgbWaUfAy6m6pzWM2uAbS5gIkWXTfPH/+Bz7jp4vgLeIhLYRm8iIA+kf4LwcBBuPJq9BY8t1IpH3CPr2kzRA8QZvGEGU/UdsTC08rcwYhLMNGTGlG1bqsd4IzGpITsHtcpL7GmY9KmwkCaMHSOy8CGfB7dmLk0Wg/um5C9K7QX+PIZSiQCrveG2oLNa+dH3UluPigYu1NCxukKG1TkEBHmC7husKgvb0mBcnr1kNczF9ceOBzH2R//O6Rf8xE4KdFZ5kFGUseQ/l7QZBAU5JnQ7dbtPiOVyDaLlVYTVg294aAkifuBXLnazEeXKaPnGqLNYOw9SGBh4PACpGtZNrbiH4X96beLoR57Tkj5kOwAcEYIAJJypzu+AUGK0DYja4rw3+upTgxwLID2j/8pk8FTP9Btb3iFvZp56L/+NiRJte7gRmjuyiINP4auMwpLC6hjqoXvGKGE6iNkf0exk0a6XEutIE78DFBFW+44K+C91qcmzmdA58P/mNOw/UwuoT78Bu+duJUYdBWGwAnMiru5It0tyHWfAbgftgvZ4XKfCv+xBynrNPZ6kqPAASc9pjY/Rmx5QNHYehszKAAA="
+                                            decoding="async" data-nimg="intrinsic" />
+                                    </span>
+                                </div>
+                                <span class="Home_platform-text__yQreL">Edge</span>
+                            </a>
+                        </li>
+
+                        <li class="Home_platform__WoNds">
+                            <a target="_blank" href="https://pan.baidu.com/s/1msUylFWCMtNWskp0u38pMQ?pwd=gv8g"
+                                rel="noreferrer">
+                                <div class="Home_platform-icon__X1TLd">
+                                    <span>
+                                        <img alt="离线版"
+                                            src="data:image/webp;base64,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"
+                                            decoding="async" data-nimg="intrinsic" />
+                                    </span>
+                                </div>
+                                <span class="Home_platform-text__yQreL">离线版</span>
+                            </a>
+                        </li>
+                        <li class="Home_platform__WoNds">
+                            <a target="_blank"
+                                href="https://mingri159.github.io/crx-webstack-page/demo-mini/index.html#/home"
+                                rel="noreferrer">
+                                <div class="Home_platform-icon__X1TLd">
+                                    <span>
+                                        <img alt="网页版"
+                                            src="data:image/webp;base64,UklGRkgCAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSL0AAAABcFtr29JQ+zSMYSU1G9k4ModvAKWT5Ou+/z//G0+KiFDYtm3DjLYfuC9on0UZQV4103YjybpuY1Nmni7PyRZSUkvmSHIHUlaDKyU+SGEdscz9IKV1iK/OQIprcEQSUl6JgDWrN1u8iAAV8VKElFcgFLwaodbeiiJI/Re6IVx5G8LGmxBGXoPQ8CqEkpcjZLwQwRME7kW9RRS/M8Abn1vhuRme2+H/Bvy/RboMLyubcbvJum1TU+WhoX0UpQEAVlA4IGQBAACwCQCdASpAAEAAPoE6lUelJCIhNfuZmKAQCWwAwxm/PM4CHK3epbnsfQBvAHPn+zGRFAvmaUYAi+KuNPBL1Qox5uNRvEgJXwKtthNeYD8Wy78f6MdnAAD+/ZuaO/9d86pezlrI+xh2eTHVV4DwU5icTPPgvWv9wI3/sCQWj/vrWeknNYarNVmOIHjpSvXOko9XEB5W0Odcj9Yl7TqulPdRyO3EoL6wNFmu6QoUQK5XKND+F75KH/5Gfu4egj1cwHhbKR7siZ7mVVwXu9u13ZvqIt4TWnZTIdu/qcV7LwqCU9wsRPSHKo4TNV8YNM2MSanwkzTgsgZ1XgHuD4CUezycVAMrO5HNWTkQmJTZDa3pVdIDKFTDiWVZTT68F76VozSM6PMf3pUv/uINbtddFr2CIE/91J2iwmt4bsaAsFPy5gsjTjhcL40f/99X//ef3/+/m5fDAf/+F3hQA7jjWg91KqYAAA=="
+                                            decoding="async" data-nimg="intrinsic" />
+                                    </span>
+                                </div>
+                                <span class="Home_platform-text__yQreL">网页版</span>
+                            </a>
+                        </li>
+
+                        <li class="Home_platform__WoNds">
+                            <a target="_blank" href="https://pan.baidu.com/s/1msUylFWCMtNWskp0u38pMQ?pwd=gv8g"
+                                rel="noreferrer">
+                                <div class="Home_platform-icon__X1TLd">
+                                    <span>
+                                        <img alt="网页版" src="./assets/android.png" decoding="async"
+                                            data-nimg="intrinsic" />
+                                    </span>
+                                </div>
+                                <span class="Home_platform-text__yQreL">安卓版</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="div_content">
+            <div class="div_content_1">
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/fda5daa59625ec4640b1ed6ee832777e.png"
+                        class="img_show img_show_left" />
+                </div>
+                <div class="desc">
+                    <h2 class="">分类清晰，可折叠</h2>
+                    <p class="">美观的</p>
+                    <p class="">自定义书签管理工具</p>
+                </div>
+            </div>
+
+            <div class="div_content_2">
+                <div class="desc desc_right">
+                    <h2 class="">方便</h2>
+                    <p class="">点击图标，打开popup页面</p>
+                    <p class="">一键添加</p>
+                </div>
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/09b30ebe4b0691189e76b829aa979189.png"
+                        class="img_show img_show_right" />
+                </div>
+            </div>
+
+            <div class="div_content_1">
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/3be7d2561f3cdafb93cbc7ed78ac71cb.png "
+                        class="img_show img_show_left" />
+                </div>
+                <div class="desc">
+                    <h2 class="">快捷、轻松</h2>
+                    <p class="">右键单击空白处打开检索页面</p>
+                    <p class="">不可或缺</p>
+                </div>
+            </div>
+
+            <div class="div_content_2">
+                <div class="desc desc_right">
+                    <h2 class="">微应用</h2>
+                    <p class="">写作『微应用』，读作『伪应用』</p>
+                    <p class="">即用即走、缓解标签页拥挤</p>
+                </div>
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/b06525e6aa21293d13e52f5f503be44f.png"
+                        class="img_show img_show_right" />
+                </div>
+            </div>
+
+            <div class="div_content_1">
+                <div class="img_out">
+                    <img src="https://img.gejiba.com/images/772bb7766beff7f1bb3e4908601e7891.png"
+                        class="img_show img_show_left" />
+                </div>
+                <div class="desc">
+                    <h2 class="">简洁</h2>
+                    <p class="">新标签页只留一个搜索框即可</p>
+                    <p class="">常用书签就放这里吧</p>
+                </div>
+            </div>
+        </div>
+        <!-- popup https://img.gejiba.com/images/09b30ebe4b0691189e76b829aa979189.png -->
+        <!-- 检索  https://img.gejiba.com/images/3be7d2561f3cdafb93cbc7ed78ac71cb.png -->
+
+        <div class="div_bottom">
+            <h2>了解更多</h2>
+            <div class="btn">
+                <a href="https://mingri159.github.io/myBlog/pages/52d5c3/" target="_blank" class="btn_0">使用说明</a>
+                <a href="https://mubu.com/doc/2zyMuBklf1p/" target="_blank" class="btn_0">更新信息</a>
+            </div>
+        </div>
+    </div>
+
+    <script></script>
+</body>
+
+</html>
