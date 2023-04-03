@@ -1,0 +1,93 @@
+div {
+    display: block;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.Home_home-main__sXFcR .Home_platforms__m_RsE {
+    width: 100%;
+    padding: 0;
+    margin: 40px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.Home_home-main__sXFcR .Home_platforms__m_RsE .Home_platform__WoNds:first-child {
+    margin-left: 0;
+}
+
+.Home_home-main__sXFcR .Home_platforms__m_RsE .Home_platform__WoNds {
+    width: 160px;
+    line-height: 56px;
+    background: linear-gradient(to left, #30CFD0 0%, #31afbf 50%);
+    box-shadow: 0 12px 20px -4px rgb(0 0 0 / 15%);
+    border-radius: 20px;
+}
+
+
+.Home_home-main__sXFcR .Home_platforms__m_RsE .Home_platform__WoNds .Home_platform-icon__X1TLd {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+}
+
+
+.Home_platform-icon__X1TLd span {
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    max-width: 100%;
+}
+
+.Home_platform-icon__X1TLd span img {
+    padding: 0;
+    margin-left: 25px;
+    width: 35px;
+    height: 35px;
+}
+
+
+.Home_home-main__sXFcR .Home_platforms__m_RsE .Home_platform__WoNds .Home_platform-text__yQreL {
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.Home_home-main__sXFcR .Home_platforms__m_RsE .Home_platform__WoNds .Home_platform-text__yQreL {
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.Home_home-main__sXFcR .Home_platforms__m_RsE .Home_platform__WoNds>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
